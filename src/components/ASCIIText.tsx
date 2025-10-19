@@ -32,7 +32,7 @@ uniform sampler2D uTexture;
 void main() {
     float time = uTime;
     vec2 pos = vUv;
-    
+
     float move = sin(time + mouse) * 0.01;
     float r = texture2D(uTexture, pos + cos(time * 2. - time + pos.x) * .01).r;
     float g = texture2D(uTexture, pos + tan(time * .5 + pos.x - time) * .01).g;
@@ -433,7 +433,7 @@ class CanvAscii {
   }
 
   clear() {
-    this.scene.traverse(object => {
+    this.scene.traverse((object: unknown) => {
       const obj = object as unknown as THREE.Mesh;
       if (!obj.isMesh) return;
       [obj.material].flat().forEach(material => {
