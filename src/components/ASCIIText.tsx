@@ -331,7 +331,7 @@ class CanvAscii {
   setMesh() {
     this.textCanvas = new CanvasTxt(this.textString, {
       fontSize: this.textFontSize,
-      fontFamily: 'IBM Plex Mono',
+      fontFamily: 'Iosevka Web',
       color: this.textColor
     });
     this.textCanvas.resize();
@@ -368,7 +368,7 @@ class CanvAscii {
     this.renderer.setClearColor(0x000000, 0);
 
     this.filter = new AsciiFilter(this.renderer, {
-      fontFamily: 'IBM Plex Mono',
+      fontFamily: 'Iosevka Web',
       fontSize: this.asciiFontSize,
       invert: true
     });
@@ -566,7 +566,7 @@ export default function ASCIIText({
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+        @import url('https://iosevka-webfonts.github.io/iosevka/Iosevka.css');
 
         body {
           margin: 0;
